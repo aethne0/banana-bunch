@@ -1,1 +1,1 @@
-distributed object storage for monke-cloud
+object storage for monke-cloud
