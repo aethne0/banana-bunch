@@ -34,7 +34,7 @@ func main() {
 		fmt.Print("password: ")
 		fmt.Scanf("%v", &password)
 
-		hashed, _ := bcrypt.GenerateFromPassword(password, 10)
+		hashed, _ := bcrypt.GenerateFromPassword(password, bcrypt.DefaultCost)
 
 		query := `insert into users (username, password) values (?, ?)`
 		_, err = db.Exec(query, username, hashed)
