@@ -68,5 +68,4 @@ func main() {
 	default:
 		fmt.Println("huh?")
 	}
-
 }
