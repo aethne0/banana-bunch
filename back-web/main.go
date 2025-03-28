@@ -57,7 +57,7 @@ func main() {
 		var db_username string
 		var db_hashed []byte
 		err = result.Scan(&db_username, &db_hashed)
-		fmt.Printf("(%s %s)\n", db_username, db_hashed)
+		fmt.Printf("DEBUG(user:%s hashed:%s)\n", db_username, db_hashed)
 
 		err := bcrypt.CompareHashAndPassword(db_hashed, password)
 		if err != nil {
