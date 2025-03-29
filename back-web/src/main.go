@@ -23,6 +23,7 @@ func main() {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/login", handleLogin)
+	mux.HandleFunc("/register", handleRegister)
 	err := http.ListenAndServe(":3000", mux)
 	if nil != err {
 		log.Fatal(err)
