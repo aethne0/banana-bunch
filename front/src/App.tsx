@@ -1,8 +1,11 @@
 import { useState } from 'react'
 // import './App.css'
 import { postLogin, postRegister } from './api';
+import { initializeBg } from './bg';
 
 const App = () => {
+    initializeBg('bg');
+
     const [user, setUser] = useState("");
     const [pass, setPass] = useState("");
 
@@ -10,6 +13,8 @@ const App = () => {
 
     return (
         <>
+            <canvas id='bg'></canvas>
+
             <h1>
                 <div><a href="http://monke.ca">monke.ca</a></div>
                 <div>
